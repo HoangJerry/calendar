@@ -32,7 +32,8 @@ export class LoginPage {
   }
 
   	initClient = () =>{
-		  	let CLIENT_ID = '1039414325227-1t0ciqq5p4reejq9f82pcili7r4tt15k.apps.googleusercontent.com';
+  			
+		  	let CLIENT_ID = '1039414325227-5lrrm5itmjfc77kefd494o2tlsvlabsj.apps.googleusercontent.com';
 			let API_KEY = 'AIzaSyCoTO2G5lD5G-doyK8LtK4YW_jkHjAl_F8';
 			let DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
 			let SCOPES = "https://www.googleapis.com/auth/calendar";
