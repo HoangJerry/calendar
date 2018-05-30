@@ -1,0 +1,50 @@
+<!--
+  Generated template for the CreatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+  		<ion-buttons start>
+			<button ion-button menuToggle>
+				<ion-icon name="menu"></ion-icon>
+			</button>
+		</ion-buttons>
+		
+    <ion-title>What is your date!</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+  <ion-item>
+    <ion-label fixed>Event</ion-label>
+    <ion-input type="text" value="" [(ngModel)]="event.summary"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>Location</ion-label>
+    <ion-input type="text" value="" [(ngModel)]="event.location"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>description</ion-label>
+    <ion-textarea rows="5" type="text" value="" [(ngModel)]="event.description"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Start Time</ion-label>
+    <ion-datetime type="datetime-local" displayFormat="YY MMM DD, h:mm A" pickerFormat="YY MMM DD, h:mm A" [(ngModel)]="event.start.dateTime"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>End Time</ion-label>
+    <ion-datetime type="datetime-local" displayFormat="YY MMM DD, h:mm A" pickerFormat="YY MMM DD, h:mm A" [(ngModel)]="event.end.dateTime"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="onClickCreate()">Round Button</button>
+  </ion-item>
+</ion-list>
+</ion-content>

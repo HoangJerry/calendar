@@ -1,0 +1,30 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+  hideBackButton
+-->
+<ion-header>
+  	<ion-navbar >
+  		<ion-buttons start>
+			<button ion-button menuToggle>
+				<ion-icon name="menu"></ion-icon>
+			</button>
+		</ion-buttons>
+    	<ion-title>Your appointment</ion-title>
+  	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding id="body">
+ 	<div class="timeline" *ngIf="appointments" >
+	  <div class="container left" *ngFor="let appointment of appointments" >
+	    <div class="content">
+	      <h3>{{appointment.start.dateTime| date: 'dd/MM/yyyy'}}</h3>
+	      <h4>Summary:<b>{{appointment.summary}}</b></h4>
+	      <h4>Location:<b>{{appointment.location}}</b></h4>
+	    </div>
+	  </div>
+	</div>	
+</ion-content>

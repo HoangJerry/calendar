@@ -1,0 +1,17 @@
+page-login {
+	.login-background{
+		background-color: #CECED1;
+		background: linear-gradient(to bottom, #CECED1 50%, #4C5769 50%, #4C5769 50%);
+	}
+	.login-main{
+		height: 100%;
+		align-items: center;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        .login-icon{
+			width: 100px;
+        }
+	}
+}
