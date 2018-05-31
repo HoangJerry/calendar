@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home'
+import { ListPage } from '../list/list'
 
 declare var gapi: any;
 /**
@@ -53,7 +53,7 @@ export class LoginPage {
 		}
 	updateSigninStatus = (isSignedIn) =>{
 		if (isSignedIn){
-			this.navCtrl.setRoot(HomePage);
+			this.navCtrl.setRoot(ListPage);
 		}
 	}
 }

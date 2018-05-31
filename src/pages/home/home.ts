@@ -66,20 +66,22 @@ export class HomePage {
 	openPage(page: PageInterface) {
 		// this.nav.setRoot(page.component);
 		// this.navCtrl.setPages(page.component);
-		this.navCtrl.push(page.component).then(()=>{
-            this.nav.setRoot(page.component);
-            // this.navCtrl.pop();
-      });
+		this.navCtrl.setRoot(page.component);
+		// this.navCtrl.push(page.component).then(()=>{
+  //           this.nav.setRoot(page.component);
+  //           // this.navCtrl.pop();
+  //     });
 	}
 
 	logout() {
 		gapi.auth2.getAuthInstance().signOut().then(()=>{
 	  		gapi.load('client:auth2', this.initClient);
+	  		this.navCtrl.setRoot(LoginPage);
 	  	});
 	}
 
 	initClient = () =>{
-		  	let CLIENT_ID = '1039414325227-qdtmn44sh4kivr9s3spq59niq5p7ro0f.apps.googleusercontent.com';
+		  	let CLIENT_ID = '1039414325227-5lrrm5itmjfc77kefd494o2tlsvlabsj.apps.googleusercontent.com';
 			let API_KEY = 'AIzaSyBAATV6OZmGn78Z9q-K20OiiLb3tyFFGK4';
 			let DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
 			let SCOPES = "https://www.googleapis.com/auth/calendar";

@@ -16,7 +16,8 @@ declare var gapi:  any;
   templateUrl: 'list.html',
 })
 export class ListPage {
-	  appointments:any = null;
+	  appointments =  [];
+
 	  constructor(public navCtrl: NavController, public navParams: NavParams) {
       // this.listUpcomingEvents();
       
@@ -31,14 +32,19 @@ export class ListPage {
      //    // this.appointments = response.result.items;
      //  })
 
-     let a = this.listUpcomingEvents()
-      console.log(a);
-      this.appointments = null;
+     // let a = this.listUpcomingEvents()
+      // console.log(a);
+      // this.appointments = null;
 
        this.listUpcomingEvents().then(res =>{
        console.log(res.result.items);
-       this.appointments = res.result.items;
-       console.log("appointments:",this.appointments);
+       let r;
+       for (r in res.result.items){
+         this.appointments.push(res.result.items[r]);
+       }
+       console.log(this.appointments);
+       // console.log("appointments:",this.appointments);
+
      });
 
 
